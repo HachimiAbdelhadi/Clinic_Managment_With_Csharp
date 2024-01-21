@@ -144,7 +144,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\C# Simple PRojects\SimpleClinicBusinussLayer\SimpleClinicBusinussLayer.csproj">
+    <ProjectReference Include="..\SimpleClinicBusinussLayer\SimpleClinicBusinussLayer.csproj">
       <Project>{bd7f4f5c-8966-46bc-be6d-b8602c8dd691}</Project>
       <Name>SimpleClinicBusinussLayer</Name>
     </ProjectReference>

@@ -40,7 +40,7 @@
             this.txtDiagno = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtVisitDes = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbPrescriptions = new System.Windows.Forms.GroupBox();
             this.btnPrescAddToRecrd = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimeEnd = new System.Windows.Forms.DateTimePicker();
@@ -77,7 +77,7 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.grbMedRecord.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbPrescriptions.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -215,28 +215,29 @@
             this.txtVisitDes.Size = new System.Drawing.Size(258, 73);
             this.txtVisitDes.TabIndex = 0;
             // 
-            // groupBox2
+            // gbPrescriptions
             // 
-            this.groupBox2.Controls.Add(this.btnPrescAddToRecrd);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.dateTimeEnd);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.dateTimeStart);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.txtInstruc);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.txtFrequ);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.txtDos);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtMedName);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(648, 113);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(326, 451);
-            this.groupBox2.TabIndex = 52;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Prescriptions";
+            this.gbPrescriptions.Controls.Add(this.btnPrescAddToRecrd);
+            this.gbPrescriptions.Controls.Add(this.label10);
+            this.gbPrescriptions.Controls.Add(this.dateTimeEnd);
+            this.gbPrescriptions.Controls.Add(this.label9);
+            this.gbPrescriptions.Controls.Add(this.dateTimeStart);
+            this.gbPrescriptions.Controls.Add(this.label8);
+            this.gbPrescriptions.Controls.Add(this.txtInstruc);
+            this.gbPrescriptions.Controls.Add(this.label6);
+            this.gbPrescriptions.Controls.Add(this.txtFrequ);
+            this.gbPrescriptions.Controls.Add(this.label5);
+            this.gbPrescriptions.Controls.Add(this.txtDos);
+            this.gbPrescriptions.Controls.Add(this.label4);
+            this.gbPrescriptions.Controls.Add(this.txtMedName);
+            this.gbPrescriptions.Enabled = false;
+            this.gbPrescriptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbPrescriptions.Location = new System.Drawing.Point(648, 113);
+            this.gbPrescriptions.Name = "gbPrescriptions";
+            this.gbPrescriptions.Size = new System.Drawing.Size(326, 451);
+            this.gbPrescriptions.TabIndex = 52;
+            this.gbPrescriptions.TabStop = false;
+            this.gbPrescriptions.Text = "Prescriptions";
             // 
             // btnPrescAddToRecrd
             // 
@@ -585,7 +586,7 @@
             this.ClientSize = new System.Drawing.Size(984, 576);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.btnExaminitionEnd);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbPrescriptions);
             this.Controls.Add(this.grbMedRecord);
             this.Controls.Add(this.panel7);
             this.Name = "DoAppointment";
@@ -596,8 +597,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.grbMedRecord.ResumeLayout(false);
             this.grbMedRecord.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbPrescriptions.ResumeLayout(false);
+            this.gbPrescriptions.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
@@ -611,7 +612,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox grbMedRecord;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbPrescriptions;
         private System.Windows.Forms.Button btnExaminitionEnd;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNotes;

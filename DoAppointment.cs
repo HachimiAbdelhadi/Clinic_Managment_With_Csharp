@@ -49,6 +49,7 @@ namespace SimpleClinic
                     MedicalRecordID = MedicalRecord.MedicalRecordID;
                     MessageBox.Show("Medical Record for this Patient Added Seccussfully");
                     grbMedRecord.Enabled = false;
+                    gbPrescriptions.Enabled = true;
                 }
                 else
                 {
@@ -82,7 +83,7 @@ namespace SimpleClinic
                 if(prescription.Save())
                 {
                     MessageBox.Show("prescription added Seccussfully");
-                    foreach(Control C in groupBox2.Controls)
+                    foreach(Control C in gbPrescriptions.Controls)
                     {
                         if(C is TextBox)
                         {

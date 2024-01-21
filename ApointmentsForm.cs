@@ -58,7 +58,7 @@ namespace SimpleClinic
         {
 
             Button Btun = (Button)sender;
-            string AppointmentDateTime = mclndAppoi.SelectionRange.Start.ToString().Remove(9) + Btun.Text;
+            string AppointmentDateTime = mclndAppoi.SelectionRange.Start.ToString().Remove(10) + Btun.Text;
             DateTime dt = Convert.ToDateTime(AppointmentDateTime);
             int DateCompare = DateTime.Compare(DateTime.Now, dt);
             if (DateCompare < 0 || DateCompare == 0)
@@ -510,6 +510,7 @@ namespace SimpleClinic
                     if (Doctor != null)
                     {
                         lblDr.Text = Doctor._LastName + "" + Doctor._FristName;
+                         
                     }
                     lblStu.Text = clsAppointments.AppointmentStatus(AppointmentToUpdate.AppointmentStatusID);
                     lbltm.Text = AppointmentToUpdate.AppointmentDateTime.ToString();
@@ -566,12 +567,15 @@ namespace SimpleClinic
                 {
 
                     AppointmentToUpdate.PatientID = int.Parse(lblPID.Text);
-                    AppointmentToUpdate.DoctorID = int.Parse(cbDoctors.SelectedValue.ToString());
+                    if(cbDoctors.SelectedValue != null )
+                        AppointmentToUpdate.DoctorID = int.Parse(cbDoctors.SelectedValue.ToString());
+                    
+                        
                     AppointmentToUpdate.AppointmentDateTime = Convert.ToDateTime(lblChoosenTime.Text);
                     AppointmentToUpdate.AppointmentStatusID = clsAppointments.AppointmentStatus(lblStu.Text);
                     if (AppointmentToUpdate.Save())
                     {
-                        MessageBox.Show("Your Appontment Reserved Seccussfully", "Information");
+                        MessageBox.Show("Your Appontment Updated Seccussfully", "Information");
                         txtAppoId.Text = AppointmentToUpdate.AppointmentID.ToString();
                         foreach (Control C in groupBox2.Controls)
                         {

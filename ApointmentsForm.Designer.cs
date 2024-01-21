@@ -40,6 +40,8 @@
             this.whoAreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnFindAppoi = new System.Windows.Forms.Button();
+            this.btnUpdateAppoi = new System.Windows.Forms.Button();
             this.txtAppoId = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -99,6 +101,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnDelAppoin = new System.Windows.Forms.Button();
             this.btnDoAppoi = new System.Windows.Forms.Button();
             this.txtDr = new System.Windows.Forms.TextBox();
             this.txtSp = new System.Windows.Forms.TextBox();
@@ -135,9 +138,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label39 = new System.Windows.Forms.Label();
-            this.btnDelAppoin = new System.Windows.Forms.Button();
-            this.btnUpdateAppoi = new System.Windows.Forms.Button();
-            this.btnFindAppoi = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -292,6 +292,40 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reservation Data";
+            // 
+            // btnFindAppoi
+            // 
+            this.btnFindAppoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(129)))), ((int)(((byte)(246)))));
+            this.btnFindAppoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFindAppoi.FlatAppearance.BorderSize = 0;
+            this.btnFindAppoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFindAppoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindAppoi.ForeColor = System.Drawing.Color.White;
+            this.btnFindAppoi.Location = new System.Drawing.Point(593, 284);
+            this.btnFindAppoi.Name = "btnFindAppoi";
+            this.btnFindAppoi.Size = new System.Drawing.Size(185, 31);
+            this.btnFindAppoi.TabIndex = 127;
+            this.btnFindAppoi.Text = "Find Appointment";
+            this.btnFindAppoi.UseVisualStyleBackColor = false;
+            this.btnFindAppoi.Click += new System.EventHandler(this.btnFindAppoi_Click);
+            // 
+            // btnUpdateAppoi
+            // 
+            this.btnUpdateAppoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(129)))), ((int)(((byte)(246)))));
+            this.btnUpdateAppoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdateAppoi.Enabled = false;
+            this.btnUpdateAppoi.FlatAppearance.BorderSize = 0;
+            this.btnUpdateAppoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdateAppoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateAppoi.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateAppoi.Location = new System.Drawing.Point(593, 320);
+            this.btnUpdateAppoi.Name = "btnUpdateAppoi";
+            this.btnUpdateAppoi.Size = new System.Drawing.Size(185, 31);
+            this.btnUpdateAppoi.TabIndex = 126;
+            this.btnUpdateAppoi.Text = "Update Appointment";
+            this.btnUpdateAppoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateAppoi.UseVisualStyleBackColor = false;
+            this.btnUpdateAppoi.Click += new System.EventHandler(this.btnUpdateAppoi_Click);
             // 
             // txtAppoId
             // 
@@ -940,7 +974,7 @@
             this.cbDoctors.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbDoctors.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbDoctors.FormattingEnabled = true;
-            this.cbDoctors.Location = new System.Drawing.Point(541, 103);
+            this.cbDoctors.Location = new System.Drawing.Point(541, 104);
             this.cbDoctors.Name = "cbDoctors";
             this.cbDoctors.Size = new System.Drawing.Size(237, 26);
             this.cbDoctors.TabIndex = 109;
@@ -1036,6 +1070,23 @@
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Reservation Data";
+            // 
+            // btnDelAppoin
+            // 
+            this.btnDelAppoin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(129)))), ((int)(((byte)(246)))));
+            this.btnDelAppoin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelAppoin.FlatAppearance.BorderSize = 0;
+            this.btnDelAppoin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelAppoin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelAppoin.ForeColor = System.Drawing.Color.White;
+            this.btnDelAppoin.Location = new System.Drawing.Point(24, 349);
+            this.btnDelAppoin.Name = "btnDelAppoin";
+            this.btnDelAppoin.Size = new System.Drawing.Size(185, 31);
+            this.btnDelAppoin.TabIndex = 121;
+            this.btnDelAppoin.Text = "Delete Appointment";
+            this.btnDelAppoin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelAppoin.UseVisualStyleBackColor = false;
+            this.btnDelAppoin.Click += new System.EventHandler(this.btnDelAppoin_Click);
             // 
             // btnDoAppoi
             // 
@@ -1425,57 +1476,6 @@
             this.label39.Size = new System.Drawing.Size(285, 29);
             this.label39.TabIndex = 13;
             this.label39.Text = "Completed Appointments";
-            // 
-            // btnDelAppoin
-            // 
-            this.btnDelAppoin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(129)))), ((int)(((byte)(246)))));
-            this.btnDelAppoin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelAppoin.FlatAppearance.BorderSize = 0;
-            this.btnDelAppoin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDelAppoin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelAppoin.ForeColor = System.Drawing.Color.White;
-            this.btnDelAppoin.Location = new System.Drawing.Point(24, 349);
-            this.btnDelAppoin.Name = "btnDelAppoin";
-            this.btnDelAppoin.Size = new System.Drawing.Size(185, 31);
-            this.btnDelAppoin.TabIndex = 121;
-            this.btnDelAppoin.Text = "Delete Appointment";
-            this.btnDelAppoin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelAppoin.UseVisualStyleBackColor = false;
-            this.btnDelAppoin.Click += new System.EventHandler(this.btnDelAppoin_Click);
-            // 
-            // btnUpdateAppoi
-            // 
-            this.btnUpdateAppoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(129)))), ((int)(((byte)(246)))));
-            this.btnUpdateAppoi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdateAppoi.Enabled = false;
-            this.btnUpdateAppoi.FlatAppearance.BorderSize = 0;
-            this.btnUpdateAppoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUpdateAppoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateAppoi.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateAppoi.Location = new System.Drawing.Point(593, 320);
-            this.btnUpdateAppoi.Name = "btnUpdateAppoi";
-            this.btnUpdateAppoi.Size = new System.Drawing.Size(185, 31);
-            this.btnUpdateAppoi.TabIndex = 126;
-            this.btnUpdateAppoi.Text = "Update Appointment";
-            this.btnUpdateAppoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateAppoi.UseVisualStyleBackColor = false;
-            this.btnUpdateAppoi.Click += new System.EventHandler(this.btnUpdateAppoi_Click);
-            // 
-            // btnFindAppoi
-            // 
-            this.btnFindAppoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(129)))), ((int)(((byte)(246)))));
-            this.btnFindAppoi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFindAppoi.FlatAppearance.BorderSize = 0;
-            this.btnFindAppoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFindAppoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFindAppoi.ForeColor = System.Drawing.Color.White;
-            this.btnFindAppoi.Location = new System.Drawing.Point(593, 284);
-            this.btnFindAppoi.Name = "btnFindAppoi";
-            this.btnFindAppoi.Size = new System.Drawing.Size(185, 31);
-            this.btnFindAppoi.TabIndex = 127;
-            this.btnFindAppoi.Text = "Find Appointment";
-            this.btnFindAppoi.UseVisualStyleBackColor = false;
-            this.btnFindAppoi.Click += new System.EventHandler(this.btnFindAppoi_Click);
             // 
             // ApointmentsForm
             // 
